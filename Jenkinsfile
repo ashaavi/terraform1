@@ -3,7 +3,7 @@ agent any
     stages{
         stage ('Git Checkout') {
             steps{
-                checkout scmGit(branches: [[name: 'main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Keerthan25/Terraform.git']])
+                checkout scmGit(branches: [[name: 'main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ashaavi/terraform1.git']])
             }
         }
         stage ('terraform init') {
