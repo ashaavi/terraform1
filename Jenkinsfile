@@ -1,9 +1,10 @@
 pipeline {
-agent any
+    agent {
+        label ('terraform)
     stages{
         stage ('Git Checkout') {
             steps{
-                checkout scmGit(branches: [[name: 'main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ashaavi/terraform1.git']])
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ashaavi/terraform1.git']])
             }
         }
         stage ('terraform init') {
@@ -13,7 +14,7 @@ agent any
         }
         stage ('terraform apply') {
             steps {
-                sh 'terraform destroy --auto-approve'
+                sh 'terraform apply --auto-approve'
             }
         }
     }
