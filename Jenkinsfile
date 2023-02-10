@@ -1,6 +1,7 @@
 pipeline {
     agent {
         label ('terraform-slave')
+    }
     stages{
         stage ('Git Checkout') {
             steps{
@@ -19,8 +20,4 @@ pipeline {
         }
     }
 }
-Footer
-© 2023 GitHub, Inc.
-Footer navigation
-Terms
-Privacy
+
