@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label ('terraform)
+        label ('terraform-slave')
     stages{
         stage ('Git Checkout') {
             steps{
