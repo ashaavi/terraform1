@@ -10,5 +10,4 @@ resource "aws_instance" "Instance-01" {
     Name = "HelloWorld"
   }
 }
-Footer
-© 2023 GitHub, Inc.
+
